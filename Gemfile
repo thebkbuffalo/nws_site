@@ -32,6 +32,29 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+#paperclip for uploading files
+gem 'paperclip'
+
+# AMAZON WEB SERVICE GEM
+gem 'aws-sdk-v1'
+
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
+
+gem 'pry', '~> 0.10.2'
+gem 'pry-rails', '~> 0.3.4'
+
+# gem for lightbox
+gem 'lightbox2-rails', '~> 2.7', '>= 2.7.1'
+
+# font awesome
+gem 'font-awesome-rails', '~> 4.4'
+
+gem 'rails_12factor', group: :production
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
