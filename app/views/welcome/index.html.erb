@@ -1,1 +1,6 @@
-<h1>soon to be awesome website? yeah sure.</h1>
+<% @blogs.each do |blog| %>
+  <h2><%= blog.title %></h2>
+  <h3><%= blog.content %></h3>
+  <h5><%= blog.author %></h5>
+  <hr>
+<% end %>
