@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
+  resources :commercials, path: "commercial"
   resources :residentials, path: "residential"
   resources :blogs, path: "blog"
 
