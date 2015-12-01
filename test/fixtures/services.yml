@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pumps_tanks: MyText
+  water_treatment: MyText
+  construction: MyText
+  pressure_systems: MyText
+  flood_prevention: MyText
+
+two:
+  pumps_tanks: MyText
+  water_treatment: MyText
+  construction: MyText
+  pressure_systems: MyText
+  flood_prevention: MyText

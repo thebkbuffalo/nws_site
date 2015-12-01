@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :services
   root 'welcome#index' # probably gonna make this blogs#index jam, should be better, but we'll see
 
   resources :abouts, path: "about"

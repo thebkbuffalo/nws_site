@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pumps tanks:</strong>
+  <%= @service.pumps_tanks %>
+</p>
+
+<p>
+  <strong>Water treatment:</strong>
+  <%= @service.water_treatment %>
+</p>
+
+<p>
+  <strong>Construction:</strong>
+  <%= @service.construction %>
+</p>
+
+<p>
+  <strong>Pressure systems:</strong>
+  <%= @service.pressure_systems %>
+</p>
+
+<p>
+  <strong>Flood prevention:</strong>
+  <%= @service.flood_prevention %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>
