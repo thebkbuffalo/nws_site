@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root 'welcome#index' # probably gonna make this blogs#index jam, should be better, but we'll see 
+  root 'welcome#index' # probably gonna make this blogs#index jam, should be better, but we'll see
 
+  resources :abouts, path: "about"
+  resources :discounts
   resources :commercials, path: "commercial"
   resources :residentials, path: "residential"
   resources :blogs, path: "blog"

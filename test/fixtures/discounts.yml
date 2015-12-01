@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount_off: 1
+  title: MyText
+
+two:
+  amount_off: 1
+  title: MyText
