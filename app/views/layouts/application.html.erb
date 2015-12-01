@@ -9,7 +9,7 @@
 <body>
 
   <% if current_user %>
-    <%= current_user.name %>
+    <h3><%= current_user.name %> || <%= link_to "Logout", '/logout' %></h3>
   <% end %>
 
 <%= yield %>
