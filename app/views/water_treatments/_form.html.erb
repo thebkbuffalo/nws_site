@@ -1,0 +1,25 @@
+<%= form_for(@water_treatment) do |f| %>
+  <% if @water_treatment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@water_treatment.errors.count, "error") %> prohibited this water_treatment from being saved:</h2>
+
+      <ul>
+      <% @water_treatment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :house_system %><br>
+    <%= f.text_area :house_system %>
+  </div>
+  <div class="field">
+    <%= f.label :reverse_osmosis %><br>
+    <%= f.text_area :reverse_osmosis %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Water Treatments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>House system</th>
+      <th>Reverse osmosis</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @water_treatments.each do |water_treatment| %>
+      <tr>
+        <td><%= water_treatment.house_system %></td>
+        <td><%= water_treatment.reverse_osmosis %></td>
+        <td><%= link_to 'Show', water_treatment %></td>
+        <td><%= link_to 'Edit', edit_water_treatment_path(water_treatment) %></td>
+        <td><%= link_to 'Destroy', water_treatment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Water treatment', new_water_treatment_path %>

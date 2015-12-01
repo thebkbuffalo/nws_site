@@ -1,0 +1,25 @@
+<%= form_for(@well_water_pump) do |f| %>
+  <% if @well_water_pump.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@well_water_pump.errors.count, "error") %> prohibited this well_water_pump from being saved:</h2>
+
+      <ul>
+      <% @well_water_pump.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pump_service %><br>
+    <%= f.text_area :pump_service %>
+  </div>
+  <div class="field">
+    <%= f.label :well_solutions %><br>
+    <%= f.text_area :well_solutions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

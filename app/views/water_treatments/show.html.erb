@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>House system:</strong>
+  <%= @water_treatment.house_system %>
+</p>
+
+<p>
+  <strong>Reverse osmosis:</strong>
+  <%= @water_treatment.reverse_osmosis %>
+</p>
+
+<%= link_to 'Edit', edit_water_treatment_path(@water_treatment) %> |
+<%= link_to 'Back', water_treatments_path %>

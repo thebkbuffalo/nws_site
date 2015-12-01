@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :water_treatments
+  resources :well_water_pumps
   resources :services
   root 'welcome#index' # probably gonna make this blogs#index jam, should be better, but we'll see
 

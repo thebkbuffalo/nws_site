@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pump service:</strong>
+  <%= @well_water_pump.pump_service %>
+</p>
+
+<p>
+  <strong>Well solutions:</strong>
+  <%= @well_water_pump.well_solutions %>
+</p>
+
+<%= link_to 'Edit', edit_well_water_pump_path(@well_water_pump) %> |
+<%= link_to 'Back', well_water_pumps_path %>

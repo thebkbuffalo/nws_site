@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  house_system: MyText
+  reverse_osmosis: MyText
+
+two:
+  house_system: MyText
+  reverse_osmosis: MyText
