@@ -1,0 +1,29 @@
+<%= form_for(@residential) do |f| %>
+  <% if @residential.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@residential.errors.count, "error") %> prohibited this residential from being saved:</h2>
+
+      <ul>
+      <% @residential.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :water_service %><br>
+    <%= f.text_area :water_service %>
+  </div>
+  <div class="field">
+    <%= f.label :pump_service %><br>
+    <%= f.text_area :pump_service %>
+  </div>
+  <div class="field">
+    <%= f.label :treatment %><br>
+    <%= f.text_area :treatment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

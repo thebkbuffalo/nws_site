@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  water_service: MyText
+  pump_service: MyText
+  treatment: MyText
+
+two:
+  water_service: MyText
+  pump_service: MyText
+  treatment: MyText

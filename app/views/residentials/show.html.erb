@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Water service:</strong>
+  <%= @residential.water_service %>
+</p>
+
+<p>
+  <strong>Pump service:</strong>
+  <%= @residential.pump_service %>
+</p>
+
+<p>
+  <strong>Treatment:</strong>
+  <%= @residential.treatment %>
+</p>
+
+<%= link_to 'Edit', edit_residential_path(@residential) %> |
+<%= link_to 'Back', residentials_path %>
