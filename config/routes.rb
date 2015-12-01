@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'welcome#index' # probably gonna make this blogs#index jam, should be better, but we'll see 
 
   resources :commercials, path: "commercial"
   resources :residentials, path: "residential"
