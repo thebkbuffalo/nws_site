@@ -8,8 +8,8 @@
 <% end %>
 
 <% @blogs.each do |blog| %>
-  <h1><%= blog.title %></h1>
-  <h3><%= blog.content %></h3>
+  <h3><%= blog.title %></h3>
+  <h4><%= blog.content %></h4>
   <h5><strong>With Love:</strong> <%= blog.author %></h5>
   <% if current_user %>
     <%= link_to 'Show', blog %>
