@@ -1,10 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Residentials</h1>
-<% if current_user %>
-  <%= link_to 'New Residential', new_residential_path %>
-  <hr>
-<% end %>
+<div id="residential_header">
+  <h1>Residential</h1>
+  <!-- <% if current_user %>
+    <%= link_to 'New Residential', new_residential_path %>
+    <hr>
+  <% end %> -->
+  <br>
+  <h3>Serving Maryland, Washington D.C. and Virginia Residents</h3>
+</div>
 
 <% @residentials.each do |residential| %>
   <% if current_user %>
@@ -12,16 +16,27 @@
     <h3><%= link_to 'Edit', edit_residential_path(residential) %></h3>
     <!-- <%= link_to 'Destroy', residential, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
-  <hr>
-  <h1>Residential Water Services</h1>
-  <%= residential.water_service %><br>
-  <hr>
-  <h1>Well Pump Services</h1>
-  <%= residential.pump_service %><br>
-  <hr>
-  <h1>Water Treatment &amp; Purification</h1>
-  <%= residential.treatment %><br>
-
+  <div id="indie_residential" class="water_residential">
+    <hr>
+    <h1>Residential Water Services</h1>
+    <%= image_tag("sink.jpg") %>
+    <h4><%= residential.water_service %></h4><br>
+    <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
+  </div>
+  <div id="indie_residential" class="pump_residential">
+    <hr>
+    <h1>Well Pump Services</h1>
+    <%= image_tag("pump_service.jpg") %>
+    <h4><%= residential.pump_service %></h4><br>
+    <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
+  </div>
+  <div id="indie_residential" class="treatment_residential">
+    <hr>
+    <h1>Water Treatment &amp; Purification</h1>
+    <%= image_tag("water_treatment.jpg") %>
+    <h4><%= residential.treatment %></h4><br>
+    <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
+  </div>
   <hr>
 <% end %>
 

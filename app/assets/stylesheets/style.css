@@ -1,3 +1,11 @@
 body {
   padding-top: 5em;
 }
+
+.navbar-header {
+  text-align: center!important;
+}
+
+.fa-home {
+  font-size: 1.85em!important;
+}

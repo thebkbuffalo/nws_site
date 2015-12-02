@@ -2,3 +2,28 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+#indie_residential {
+  margin: 0 15em;
+}
+
+#residential_header {
+  text-align: center;
+}
+
+#indie_residential img {
+  display: inline-block;
+  border-radius: 10px;
+}
+
+#indie_residential h4 {
+  display: inline-block;
+}
+
+#indie_residential a {
+  color: blue;
+}
+
+#indie_residential h1{
+  color: blue;
+}
