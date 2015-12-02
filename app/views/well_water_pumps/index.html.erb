@@ -2,28 +2,22 @@
 
 <h1>Listing Well Water Pumps</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Pump service</th>
-      <th>Well solutions</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% if current_user %>
+  <%= link_to 'New Well water pump', new_well_water_pump_path %>
+  <hr>
+<% end %>
+<% @well_water_pumps.each do |well_water_pump| %>
+  <% if current_user %>
+    <%= link_to 'Show', well_water_pump %>
+    <%= link_to 'Edit', edit_well_water_pump_path(well_water_pump) %>
+    <%= link_to 'Destroy', well_water_pump, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <hr>
+  <h2>Well Pump Services</h2>
+  <%= well_water_pump.pump_service %><br>
+  <hr>
+  <h2>Low Yielding Well Solutions</h2>
+  <%= well_water_pump.well_solutions %>
 
-  <tbody>
-    <% @well_water_pumps.each do |well_water_pump| %>
-      <tr>
-        <td><%= well_water_pump.pump_service %></td>
-        <td><%= well_water_pump.well_solutions %></td>
-        <td><%= link_to 'Show', well_water_pump %></td>
-        <td><%= link_to 'Edit', edit_well_water_pump_path(well_water_pump) %></td>
-        <td><%= link_to 'Destroy', well_water_pump, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<% end %>
 <br>
-
-<%= link_to 'New Well water pump', new_well_water_pump_path %>

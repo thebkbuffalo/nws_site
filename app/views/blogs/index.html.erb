@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<% if current_user %>
-  <%= link_to 'New Blog', new_blog_path %>
-<% end %>
-<br>
 <h1>News and Such</h1>
 <hr>
+<% if current_user %>
+  <%= link_to 'New Blog', new_blog_path %>
+  <hr>
+<% end %>
 
 <% @blogs.each do |blog| %>
   <h1><%= blog.title %></h1>

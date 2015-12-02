@@ -1,35 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Services</h1>
+<% if current_user %>
+  <%= link_to 'New Service', new_service_path %>
+  <hr>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Pumps tanks</th>
-      <th>Water treatment</th>
-      <th>Construction</th>
-      <th>Pressure systems</th>
-      <th>Flood prevention</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @services.each do |service| %>
-      <tr>
-        <td><%= service.pumps_tanks %></td>
-        <td><%= service.water_treatment %></td>
-        <td><%= service.construction %></td>
-        <td><%= service.pressure_systems %></td>
-        <td><%= service.flood_prevention %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<% @services.each do |service| %>
+  <% if current_user %>
+    <%= link_to 'Show', service %>
+    <%= link_to 'Edit', edit_service_path(service) %>
+    <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <hr>
+  <h2>Well Pumps &amp; Tanks</h2>
+  <%= service.pumps_tanks %><br>
+  <hr>
+  <h2>Water Treatment</h2>
+  <%= service.water_treatment %><br>
+  <hr>
+  <h2>New Construction</h2>
+  <%= service.construction %>
+  <hr>
+  <h2>Constant Pressure Systems</h2>
+  <%= service.pressure_systems %>
+  <hr>
+  <h2>Flood Prevention Devices</h2>
+  <%= service.flood_prevention %><br>
+  <hr>
+<% end %>
 <br>
-
-<%= link_to 'New Service', new_service_path %>

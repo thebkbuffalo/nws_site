@@ -1,27 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Abouts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h1>About</h1>
+<hr>
+<% if current_user %>
+  <%= link_to 'New About', new_about_path %>
+  <hr>
+<% end %>
 
-  <tbody>
-    <% @abouts.each do |about| %>
-      <tr>
-        <td><%= about.content %></td>
-        <td><%= link_to 'Show', about %></td>
-        <td><%= link_to 'Edit', edit_about_path(about) %></td>
-        <td><%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @abouts.each do |about| %>
+  <%= about.content %><br><br>
+  <% if current_user %>
+    <%= link_to 'Show', about %>
+    <%= link_to 'Edit', edit_about_path(about) %>
+    <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>
 
 <br>
-
-<%= link_to 'New About', new_about_path %>

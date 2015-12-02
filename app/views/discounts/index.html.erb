@@ -3,16 +3,18 @@
 <h1>Listing Discounts</h1>
 <% if current_user %>
   <%= link_to 'New Discount', new_discount_path %>
+  <hr>
 <% end %>
 
-<hr>
 
 <% @discounts.each do |discount| %>
-  <%= discount.amount_off %>
-  <%= discount.title %><br>
-  <%= link_to 'Show', discount %>
-  <%= link_to 'Edit', edit_discount_path(discount) %>
-  <%= link_to 'Destroy', discount, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <h3>$<%= discount.amount_off %> Off!</h3>
+  <%= discount.title %><br><br>
+  <% if current_user %>
+    <%= link_to 'Show', discount %>
+    <%= link_to 'Edit', edit_discount_path(discount) %>
+    <%= link_to 'Destroy', discount, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
   <hr>
 <% end %>
 

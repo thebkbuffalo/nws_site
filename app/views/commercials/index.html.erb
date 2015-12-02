@@ -1,27 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Commercials</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Water service</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @commercials.each do |commercial| %>
-      <tr>
-        <td><%= commercial.water_service %></td>
-        <td><%= link_to 'Show', commercial %></td>
-        <td><%= link_to 'Edit', edit_commercial_path(commercial) %></td>
-        <td><%= link_to 'Destroy', commercial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% if current_user %>
+  <%= link_to 'New Commercial', new_commercial_path %>
+  <hr>
+<% end %>
+<% @commercials.each do |commercial| %>
+  <% if current_user %>
+    <%= link_to 'Show', commercial %>
+    <%= link_to 'Edit', edit_commercial_path(commercial) %>
+    <%= link_to 'Destroy', commercial, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <hr>
+  <h2>Commercial Water Service</h2><br>
+  <%= commercial.water_service %>
+<% end %>
 
 <br>
-
-<%= link_to 'New Commercial', new_commercial_path %>
