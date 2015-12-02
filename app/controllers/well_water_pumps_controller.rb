@@ -21,6 +21,7 @@ class WellWaterPumpsController < ApplicationController
       @well_water_pump = WellWaterPump.new
     else
       redirect_to '/well_water_pumps'
+    end
   end
 
   # GET /well_water_pumps/1/edit
