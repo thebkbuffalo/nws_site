@@ -1,28 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Blogs</h1>
+<% if current_user %>
+  <%= link_to 'New Blog', new_blog_path %>
+<% end %>
+<br>
+<h1>News and Such</h1>
+<hr>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <h1><%= blog.title %></h1>
-      <h3><%= blog.content %></h3>
-      <h5><%= blog.author %></h5>
-      <tr>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @blogs.each do |blog| %>
+  <h1><%= blog.title %></h1>
+  <h3><%= blog.content %></h3>
+  <h5><strong>With Love:</strong> <%= blog.author %></h5>
+  <% if current_user %>
+    <%= link_to 'Show', blog %>
+    <%= link_to 'Edit', edit_blog_path(blog) %>
+    <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <hr>
+<% end %>
 
 <br>
-
-<%= link_to 'New Blog', new_blog_path %>
+<br>

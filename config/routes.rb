@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  root 'blogs#index' # probably gonna make this blogs#index jam, should be better, but we'll see
+
+
   resources :water_treatments
   resources :well_water_pumps
   resources :services
-  root 'welcome#index' # probably gonna make this blogs#index jam, should be better, but we'll see
-
   resources :abouts, path: "about"
   resources :discounts
   resources :commercials, path: "commercial"
