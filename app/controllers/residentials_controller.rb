@@ -10,11 +10,18 @@ class ResidentialsController < ApplicationController
   # GET /residentials/1
   # GET /residentials/1.json
   def show
+    if !current_user
+      redirect_to '/residential'
+    end
   end
 
   # GET /residentials/new
   def new
-    @residential = Residential.new
+    if current_user
+      @residential = Residential.new
+    else
+      redirect_to '/residential'
+    end
   end
 
   # GET /residentials/1/edit

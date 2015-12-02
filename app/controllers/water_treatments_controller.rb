@@ -10,11 +10,18 @@ class WaterTreatmentsController < ApplicationController
   # GET /water_treatments/1
   # GET /water_treatments/1.json
   def show
+    if !current_user
+      redirect_to '/water_treatments'
+    end
   end
 
   # GET /water_treatments/new
   def new
-    @water_treatment = WaterTreatment.new
+    if current_user
+      @water_treatment = WaterTreatment.new
+    else
+      redirect_to '/water_treatments'
+    end
   end
 
   # GET /water_treatments/1/edit

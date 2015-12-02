@@ -10,11 +10,18 @@ class ServicesController < ApplicationController
   # GET /services/1
   # GET /services/1.json
   def show
+    if !current_user
+      redirect_to '/services'
+    end
   end
 
   # GET /services/new
   def new
-    @service = Service.new
+    if current_user
+      @service = Service.new
+    else
+      redirect_to '/services'
+    end
   end
 
   # GET /services/1/edit

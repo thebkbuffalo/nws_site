@@ -10,11 +10,18 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    if !current_user
+      redirect_to '/products'
+    end
   end
 
   # GET /products/new
   def new
-    @product = Product.new
+    if current_user
+      @product = Product.new
+    else
+      redirect_to '/products'
+    end
   end
 
   # GET /products/1/edit

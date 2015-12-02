@@ -10,11 +10,18 @@ class DiscountsController < ApplicationController
   # GET /discounts/1
   # GET /discounts/1.json
   def show
+    if !current_user
+      redirect_to '/discounts'
+    end
   end
 
   # GET /discounts/new
   def new
-    @discount = Discount.new
+    if current_user
+      @discount = Discount.new
+    else
+      redirect_to '/discounts'
+    end
   end
 
   # GET /discounts/1/edit

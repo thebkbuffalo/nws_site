@@ -10,11 +10,17 @@ class WellWaterPumpsController < ApplicationController
   # GET /well_water_pumps/1
   # GET /well_water_pumps/1.json
   def show
+    if !current_user
+      redirect_to '/well_water_pumps'
+    end
   end
 
   # GET /well_water_pumps/new
   def new
-    @well_water_pump = WellWaterPump.new
+    if current_user
+      @well_water_pump = WellWaterPump.new
+    else
+      redirect_to '/well_water_pumps'
   end
 
   # GET /well_water_pumps/1/edit
