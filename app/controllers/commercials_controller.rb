@@ -10,11 +10,18 @@ class CommercialsController < ApplicationController
   # GET /commercials/1
   # GET /commercials/1.json
   def show
+    if !current_user
+      redirect_to '/commercial'
+    end
   end
 
   # GET /commercials/new
   def new
-    @commercial = Commercial.new
+    if current_user
+      @commercial = Commercial.new
+    else
+      redirect_to '/commercial'
+    end
   end
 
   # GET /commercials/1/edit

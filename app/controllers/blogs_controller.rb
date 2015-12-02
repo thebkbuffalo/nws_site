@@ -10,11 +10,18 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    if !current_user
+      redirect_to '/blog'
+    end
   end
 
   # GET /blogs/new
   def new
-    @blog = Blog.new
+    if current_user
+      @blog = Blog.new
+    else
+      redirect_to '/blog'
+    end
   end
 
   # GET /blogs/1/edit

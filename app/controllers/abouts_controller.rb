@@ -10,11 +10,18 @@ class AboutsController < ApplicationController
   # GET /abouts/1
   # GET /abouts/1.json
   def show
+    if !current_user
+      redirect_to '/about'
+    end
   end
 
   # GET /abouts/new
   def new
-    @about = About.new
+    if current_user
+      @about = About.new
+    else
+      redirect_to '/about'
+    end
   end
 
   # GET /abouts/1/edit
