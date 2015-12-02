@@ -7,9 +7,9 @@
 <% end %>
 <% @commercials.each do |commercial| %>
   <% if current_user %>
-    <%= link_to 'Show', commercial %>
-    <%= link_to 'Edit', edit_commercial_path(commercial) %>
-    <%= link_to 'Destroy', commercial, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <!-- <%= link_to 'Show', commercial %> -->
+    <h3><%= link_to 'Edit', edit_commercial_path(commercial) %></h3>
+    <!-- <%= link_to 'Destroy', commercial, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
   <hr>
   <h2>Commercial Water Service</h2><br>

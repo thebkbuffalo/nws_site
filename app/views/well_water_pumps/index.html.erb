@@ -8,9 +8,9 @@
 <% end %>
 <% @well_water_pumps.each do |well_water_pump| %>
   <% if current_user %>
-    <%= link_to 'Show', well_water_pump %>
-    <%= link_to 'Edit', edit_well_water_pump_path(well_water_pump) %>
-    <%= link_to 'Destroy', well_water_pump, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <!-- <%= link_to 'Show', well_water_pump %> -->
+    <h3><%= link_to 'Edit', edit_well_water_pump_path(well_water_pump) %></h3>
+    <!-- <%= link_to 'Destroy', well_water_pump, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
   <hr>
   <h2>Well Pump Services</h2>

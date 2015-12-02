@@ -8,9 +8,9 @@
 
 <% @residentials.each do |residential| %>
   <% if current_user %>
-    <%= link_to 'Show', residential %>
-    <%= link_to 'Edit', edit_residential_path(residential) %>
-    <%= link_to 'Destroy', residential, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <!-- <%= link_to 'Show', residential %> -->
+    <h3><%= link_to 'Edit', edit_residential_path(residential) %></h3>
+    <!-- <%= link_to 'Destroy', residential, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
   <hr>
   <h1>Residential Water Services</h1>

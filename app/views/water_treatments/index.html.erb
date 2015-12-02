@@ -8,9 +8,9 @@
 
 <% @water_treatments.each do |water_treatment| %>
   <% if current_user %>
-    <%= link_to 'Show', water_treatment %>
-    <%= link_to 'Edit', edit_water_treatment_path(water_treatment) %>
-    <%= link_to 'Destroy', water_treatment, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <!-- <%= link_to 'Show', water_treatment %> -->
+    <h3><%= link_to 'Edit', edit_water_treatment_path(water_treatment) %></h3>
+    <!-- <%= link_to 'Destroy', water_treatment, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
   <hr>
   <h2>Whole House System</h2>

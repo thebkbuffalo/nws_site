@@ -11,9 +11,9 @@
 <% @abouts.each do |about| %>
   <%= about.content %><br><br>
   <% if current_user %>
-    <%= link_to 'Show', about %>
-    <%= link_to 'Edit', edit_about_path(about) %>
-    <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <!-- <%= link_to 'Show', about %> -->
+    <h3><%= link_to 'Edit', edit_about_path(about) %></h3>
+    <!-- <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
 <% end %>
 

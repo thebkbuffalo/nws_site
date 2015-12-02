@@ -8,9 +8,9 @@
 
 <% @services.each do |service| %>
   <% if current_user %>
-    <%= link_to 'Show', service %>
-    <%= link_to 'Edit', edit_service_path(service) %>
-    <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <!-- <%= link_to 'Show', service %> -->
+    <h3><%= link_to 'Edit', edit_service_path(service) %></h3>
+    <!-- <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
   <hr>
   <h2>Well Pumps &amp; Tanks</h2>
