@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pumps_tanks: MyText
+
+two:
+  pumps_tanks: MyText

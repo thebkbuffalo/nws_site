@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+<hr>
+<% if current_user %>
+  <%= link_to 'New Product', new_product_path %>
+  <hr>
+<% end %>
+
+<% @products.each do |product| %>
+  <h2>Well Pumps &amp; Tanks</h2>
+  <hr>
+  <%= product.pumps_tanks %>
+  <% if current_user %>
+    <%= link_to 'Show', product %>
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>
+
+<br>
