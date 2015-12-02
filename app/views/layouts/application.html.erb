@@ -12,21 +12,29 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <ul class="nav navbar-nav">
-          <li class="active"><%= link_to "Home", '/' %></li>
+          <li><%= link_to "Home", '/' %></li>
           <li><%= link_to "Residential", '/residential' %></li>
           <li><%= link_to "Commercial", '/commercial' %></li>
           <li><%= link_to "Services Provided", '/services' %></li>
+          <li><%= link_to "Water Treatment & Purification", '/water_treatments' %></li>
+          <li><%= link_to "Well Water Pump & Tanks", '/well_water_pumps' %></li>
           <li><%= link_to "Products", '/' %></li>
           <li><%= link_to "Discounts", '/discounts' %></li>
           <li><%= link_to "About", '/about' %></li>
           <li><%= link_to "Contact", '/contact' %></li>
+          <% if current_user %>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "#{current_user.name}", '/', style: "color:black;font-weight:bold;" %></li>
+              <li><%= link_to "Logout", '/logout' %></li>
+            </ul>
+          <% end %>
         </ul>
       </div>
     </div>
   </nav>
-  <% if current_user %>
+  <!-- <% if current_user %>
     <h3>|<%= current_user.name %> || <a href="/">HOME</a> || <%= link_to "Logout", '/logout' %>|</h3>
-  <% end %>
+  <% end %> -->
 
 <%= yield %>
 
