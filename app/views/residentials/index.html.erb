@@ -21,7 +21,7 @@
     <h1 class="section_header">Residential Water Services</h1>
     <div class="residential_content">
       <%= image_tag("sink.jpg") %>
-      <h4><%= residential.water_service %></h4><br>
+      <h4><%= simple_format(residential.water_service) %></h4><br>
     </div>
     <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
   </div>
@@ -30,7 +30,7 @@
     <h1>Well Pump Services</h1>
     <div class="residential_content">
       <%= image_tag("pump_service.jpg") %>
-      <h4><%= residential.pump_service %></h4><br>
+      <h4><%= simple_format(residential.pump_service) %></h4><br>
     </div>
     <div class="pump_services">
       <h4>Our Residential Well Pump Services include:</h4>
@@ -53,7 +53,7 @@
     <hr>
     <h1>Water Treatment &amp; Purification</h1>
     <%= image_tag("water_treatment.jpg") %>
-    <h4><%= residential.treatment %></h4><br>
+    <h4><%= simple_format(residential.treatment) %></h4><br>
     <div class="treatment_services">
       <h4>Our Residential Water Treatment and Purification Services include but are not limited to:</h4>
       <ul class="checklist">
