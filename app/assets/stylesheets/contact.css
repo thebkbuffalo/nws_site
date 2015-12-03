@@ -1,0 +1,11 @@
+.contact_header {
+  text-align: center;
+}
+
+#contact_content {
+  margin: 0 15em;
+}
+
+#contact_content img {
+  border-radius: 10px;
+}
