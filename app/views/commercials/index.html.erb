@@ -1,19 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Commercials</h1>
-<% if current_user %>
+<div class="commercial_header">
+  <h1>Commercial</h1>
+  <br>
+  <h3>Serving Maryland, Washington D.C. and Virginia Commercial Clients</h3>
+</div>
+<!-- <% if current_user %>
   <%= link_to 'New Commercial', new_commercial_path %>
   <hr>
-<% end %>
+<% end %> -->
 <% @commercials.each do |commercial| %>
   <% if current_user %>
     <!-- <%= link_to 'Show', commercial %> -->
     <h3><%= link_to 'Edit', edit_commercial_path(commercial) %></h3>
     <!-- <%= link_to 'Destroy', commercial, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
-  <hr>
-  <h2>Commercial Water Service</h2><br>
-  <%= commercial.water_service %>
+  <div id="commercial_content">
+    <hr>
+    <h1 class="section_header">Commercial Water Service</h1><br>
+    <%= image_tag('commercial.jpg') %>
+    <h4><%= commercial.water_service %></h4>
+  </div>
 <% end %>
 
 <br>

@@ -6,6 +6,11 @@ body {
   text-align: center!important;
 }
 
+.nav li {
+  font-size: 1.08em!important;
+  margin: .5em .1em!important;
+}
+
 .fa-home {
   font-size: 1.85em!important;
 }
@@ -16,4 +21,71 @@ body {
   padding: 1.75em;
   font-size: 1.15em;
   display: inline-block;
+}
+
+.section_header {
+  color: #3e90f5;
+}
+
+
+footer {
+  height: 362px;
+  width: 100%;
+  margin-top: 8em;
+  background: #2185D5;
+  color: white;
+  text-align: center;
+}
+
+footer hr {
+  margin: 0!important;
+}
+
+footer a {
+  color: white;
+}
+
+footer div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#top_footer {
+  /*height: 120px;*/
+  background: #1E549F;
+  width: 100%;
+}
+
+.top_footer_content {
+  padding: .4em 0;
+  /*margin: 0 15em;*/
+}
+
+.counties li {
+  list-style: none;
+  display: inline-block;
+  padding: .5em;
+  vertical-align: top;
+}
+
+#footer_bottom {
+  text-align: center;
+  margin-top: 2.2em;
+}
+
+#footer_left {
+  width: 33%;
+}
+
+#footer_center {
+  width: 33%;
+}
+
+#footer_center p {
+  font-size: 15px;
+}
+
+#footer_right {
+  width: 33%;
+  /*margin-left: 2em;*/
 }

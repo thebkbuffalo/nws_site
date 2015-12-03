@@ -38,5 +38,47 @@
 
 <%= yield %>
 
+<footer>
+  <div id="top_footer">
+    <div class="top_footer_content">
+      <h3>Proudly Serving Clients for Over 30 years in:</h3>
+      <ul class="counties">
+        <li>Howard<br> County</li>
+        <li>Montgomery<br> County</li>
+        <li>Frederick<br> County</li>
+        <li>Anne<br> Arundel<br> County</li>
+        <li>Carroll<br> County</li>
+        <li>Baltimore<br> County</li>
+        <li>Prince<br> George's<br> County</li>
+        <li>Harford<br> County</li>
+        <li>Washington<br> DC</li>
+        <li>Baltimore<br> City</li>
+        <li>Loudoun<br> County</li>
+        <li>Fairfax<br> County</li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div id="footer_bottom">
+    <div id="footer_left">
+      <%= image_tag("seals.png", height: "50px", width: "103px")  %>
+      <p>Hours of Operation: Monday thru Friday 7am - 5pm</p>
+      <p>24-Hour Emergency Service</p>
+      <br>
+      <p>Copyright © 2015 National Water Service. All Rights Reserved.</p>
+    </div>
+    <div id="footer_center">
+      <p>| <%= link_to 'Home', '/' %> | <%= link_to "Residential", '/residential' %> | <%= link_to "Commercial", '/commercial' %> | <%= link_to "Services", '/services' %> | <%= link_to "About", '/about' %> | <%= link_to "Contact", '/contact' %></p> 
+    </div>
+    <div id="footer_right">
+      <%= image_tag("logo.png", height: "72px", width: "150px") %>
+      <p><strong>Toll Free: </strong><a href="tel:800-232-3506">(800)-232-3506</a></p>
+      <p><strong>Washington D.C: </strong><a href="tel:301-854-1333">(301)-854-1333</a></p>
+      <p><strong>Baltimore: </strong><a href="tel:410-379-1993">(410)-379-1993</a></p>
+      <p><strong>Virginia: </strong><a href="tel:540-882-4006">(540)-882-4006</a></p>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

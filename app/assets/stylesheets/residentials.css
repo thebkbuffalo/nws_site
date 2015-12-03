@@ -7,6 +7,10 @@
   margin: 0 15em;
 }
 
+#indie_residential hr {
+  border-top: 1px solid black!important;
+}
+
 #residential_header {
   text-align: center;
 }
@@ -17,11 +21,11 @@
 
 
 #indie_residential a {
-  color: blue;
+  color: #3e90f5;
 }
 
 #indie_residential h1{
-  color: blue;
+  color: #3e90f5;
 }
 
 .residential_content img, h4 {
