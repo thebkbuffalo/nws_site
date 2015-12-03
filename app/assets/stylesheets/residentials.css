@@ -12,13 +12,9 @@
 }
 
 #indie_residential img {
-  display: inline-block;
   border-radius: 10px;
 }
 
-#indie_residential h4 {
-  display: inline-block;
-}
 
 #indie_residential a {
   color: blue;
@@ -26,4 +22,8 @@
 
 #indie_residential h1{
   color: blue;
+}
+
+.residential_content img, h4 {
+  display: inline-block;
 }
