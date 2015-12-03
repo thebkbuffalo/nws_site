@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :pump_service %><br>
-    <%= f.text_area :pump_service %>
+    <h2>Pump Services</h2>
+    <%= f.text_area :pump_service, class: 'ckeditor' %>
   </div>
   <div class="field">
-    <%= f.label :well_solutions %><br>
-    <%= f.text_area :well_solutions %>
+    <h2>Well Solutions</h2>
+    <%= f.text_area :well_solutions, class: 'ckeditor' %>
   </div>
   <div class="actions">
     <%= f.submit %>

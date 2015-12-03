@@ -1,11 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Well Water Pumps</h1>
+<div class="well_header">
+  <h1 class="page_title">Well Pump Services</h1><br>
+  <h3 class="tag_line">Maryland, Washington D.C. and Virginia Well Pump Service</h3>
+</div>
 
-<% if current_user %>
-  <%= link_to 'New Well water pump', new_well_water_pump_path %>
-  <hr>
-<% end %>
 <% @well_water_pumps.each do |well_water_pump| %>
   <% if current_user %>
     <!-- <%= link_to 'Show', well_water_pump %> -->
@@ -13,11 +12,23 @@
     <!-- <%= link_to 'Destroy', well_water_pump, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
   <hr>
-  <h2>Well Pump Services</h2>
-  <%= well_water_pump.pump_service %><br>
-  <hr>
-  <h2>Low Yielding Well Solutions</h2>
-  <%= well_water_pump.well_solutions %>
-
+  <div id="well_content">
+    <div class="well_pump_service">
+      <h2 class="section_header">Well Pump Services</h2>
+      <%= image_tag('pump_service.jpg') %>
+      <%= image_tag('well-pump-install.jpg', class: 'second_pic') %>
+      <%= simple_format(well_water_pump.pump_service) %>
+      <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
+      <hr>
+    </div>
+    <div class="low_well_solutions">
+      <h2 class="section_header">Low Yielding Well Solutions</h2>
+      <%= image_tag('big_cylinders.jpg') %>
+      <%= image_tag('big_white_box.jpg', class: 'second_pic') %>
+      <%= simple_format(well_water_pump.well_solutions) %><br>
+      <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
+      <hr>
+    </div>
+  </div>
 <% end %>
 <br>

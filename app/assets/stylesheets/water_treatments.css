@@ -1,4 +1,23 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+.treatment_header {
+  text-align: center;
+}
+
+#treatment_content {
+  margin: 0 15em;
+}
+
+#treatment_content img {
+  border-radius: 15px;
+}
+
+#treatment_content a {
+  color: #3e90f5;
+}
+
+.whole_house img {
+  display: inline-block;
+}
+
+.second_pic {
+  margin-left: 2em;
+}

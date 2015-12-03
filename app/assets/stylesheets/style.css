@@ -11,6 +11,14 @@ body {
   margin: .5em .1em!important;
 }
 
+.page_title {
+  color: #155674;
+}
+
+.tag_line {
+  color: #2185D5;
+}
+
 .fa-home {
   font-size: 1.85em!important;
 }

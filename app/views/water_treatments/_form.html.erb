@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :house_system %><br>
-    <%= f.text_area :house_system %>
+    <h3>House System</h3>
+    <%= f.text_area :house_system, class: 'ckeditor' %>
   </div>
   <div class="field">
-    <%= f.label :reverse_osmosis %><br>
-    <%= f.text_area :reverse_osmosis %>
+    <h2>Reverse Osmosis</h2>
+    <%= f.text_area :reverse_osmosis, class: 'ckeditor' %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,10 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Water Treatments</h1>
-<% if current_user %>
+<div class="treatment_header">
+  <h1 class="page_title">Listing Water Treatments</h1>
+  <br>
+  <h3 class="tag_line">Maryland, Washington D.C. and Virginia Water Treatment</h3>
+</div>
+<!-- <% if current_user %>
   <%= link_to 'New Water treatment', new_water_treatment_path %>
   <hr>
-<% end %>
+<% end %> -->
 
 <% @water_treatments.each do |water_treatment| %>
   <% if current_user %>
@@ -13,12 +17,24 @@
     <!-- <%= link_to 'Destroy', water_treatment, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
   <hr>
-  <h2>Whole House System</h2>
-  <%= water_treatment.house_system %><br>
-  <hr>
-  <h2>Reverse Osmosis Drinking Water</h2>
-  <%= water_treatment.reverse_osmosis %><br>
-  <hr>
+  <div id="treatment_content">
+    <div class="whole_house">
+      <h2 class="section_header">Whole House System</h2>
+      <%= image_tag('white_box.jpg') %>
+      <%= image_tag('water_treatment.jpg', class: 'second_pic') %>
+      <%= simple_format(water_treatment.house_system) %>
+      <hr>
+    </div>
+    <div class="treatment_osmosis">
+      <h2 class="section_header">Reverse Osmosis Drinking Water</h2>
+      <%= image_tag('under-sink.jpg') %>
+      <%= image_tag('green_tubes.jpg', class: "second_pic") %>
+      <%= simple_format(water_treatment.reverse_osmosis) %>
+      <br>
+      <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
+      <hr>
+    </div>
+  </div>
 <% end %>
 
 <br>

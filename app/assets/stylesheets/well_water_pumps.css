@@ -1,4 +1,23 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+.well_header {
+  text-align: center;
+}
+
+#well_content {
+  margin: 0 15em;
+}
+
+#well_content img {
+  border-radius: 15px;
+}
+
+#well_content a {
+  color: #3e90f5;
+}
+
+.well_pump_service img {
+  display: inline-block;
+}
+
+.low_well_solutions img {
+  display: inline-block;
+}
