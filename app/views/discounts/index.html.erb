@@ -1,22 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="page_title">Listing Discounts</h1>
+<div class="discount_header">
+  <h1 class="page_title">Listing Discounts</h1><br>
+  <h3 class="tag_line">Discount Water Service for Maryland, Virginia, and DC</h3>
+</div>
 <hr>
 <% if current_user %>
-  <%= link_to 'New Discount', new_discount_path %>
+  <h4><%= link_to 'New Discount', new_discount_path %></h4>
   <hr>
 <% end %>
 
 
 <% @discounts.each do |discount| %>
-  <h3>$<%= discount.amount_off %> Off!</h3>
-  <%= discount.title %><br><br>
-  <% if current_user %>
-    <%= link_to 'Show', discount %>
-    <%= link_to 'Edit', edit_discount_path(discount) %>
-    <%= link_to 'Destroy', discount, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-  <hr>
+    <div id="discount_content">
+    <h1>$<%= discount.amount_off %> Off!</h1><br>
+    <%= simple_format(discount.title) %><br><br>
+    <% if current_user %>
+      <%= link_to 'Show', discount %>
+      <%= link_to 'Edit', edit_discount_path(discount) %>
+      <%= link_to 'Destroy', discount, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    <hr>
+  </div>
 <% end %>
 
 

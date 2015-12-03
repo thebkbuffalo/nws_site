@@ -4,7 +4,7 @@ class DiscountsController < ApplicationController
   # GET /discounts
   # GET /discounts.json
   def index
-    @discounts = Discount.all
+  @discounts = Discount.all.order('amount_off asc')
   end
 
   # GET /discounts/1

@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :amount_off %><br>
-    <%= f.number_field :amount_off %>
+    <h2>Amount Off</h2>
+    <h2>&#36; <%= f.number_field :amount_off %></h2>
   </div>
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_area :title %>
+    <h2>Special Offer Description</h2>
+    <%= f.text_area :title, class: 'ckeditor' %>
   </div>
   <div class="actions">
     <%= f.submit %>
