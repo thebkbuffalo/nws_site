@@ -1,4 +1,15 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+#indie_services {
+  margin: 0 15em;
+}
+
+#indie_services img {
+  border-radius: 10px;
+}
+
+#indie_services a {
+  color: #3e90f5;
+}
+
+.services_header {
+  text-align: center;
+}

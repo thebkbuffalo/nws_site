@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Services</h1>
+<div class="services_header">
+  <h1>Services</h1><br>
+  <h3>Water service for Maryland, Washington DC, and Virginia</h3>
+</div>
 <!-- <% if current_user %>
   <%= link_to 'New Service', new_service_path %>
   <hr>
@@ -13,20 +16,71 @@
     <!-- <%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
   <hr>
-  <h2>Well Pumps &amp; Tanks</h2>
-  <%= service.pumps_tanks %><br>
-  <hr>
-  <h2>Water Treatment</h2>
-  <%= service.water_treatment %><br>
-  <hr>
-  <h2>New Construction</h2>
-  <%= service.construction %>
-  <hr>
-  <h2>Constant Pressure Systems</h2>
-  <%= service.pressure_systems %>
-  <hr>
-  <h2>Flood Prevention Devices</h2>
-  <%= service.flood_prevention %><br>
-  <hr>
+  <div id="indie_services">
+    <div class="service_pump">
+      <h2 class="section_header">Well Pumps &amp; Tanks</h2>
+      <%= image_tag('pump_service.jpg') %>
+      <%= simple_format(service.pumps_tanks) %>
+      <ul class="checklist">
+        <li><i class="fa fa-check"></i> Constant Pressure Well Pumps</li>
+        <li><i class="fa fa-check"></i> Well Pump Replacement</li>
+        <li><i class="fa fa-check"></i> In-Well Camera Service</li>
+        <li><i class="fa fa-check"></i> Booster Pumps</li>
+        <li><i class="fa fa-check"></i> New Construction</li>
+        <li><i class="fa fa-check"></i> Trenching Service</li>
+        <li><i class="fa fa-check"></i> Water Tank Service</li>
+        <li><i class="fa fa-check"></i> Comprehensive Lab Testing</li>
+        <li><i class="fa fa-check"></i> Low Yielding Well Options</li>
+        <li><i class="fa fa-check"></i> Storage Tank Options</li>
+      </ul>
+      <a href="/well_water_pumps">Learn More</a>
+      <hr>
+    </div>
+    <div class="service_treatment">
+      <h2 class="section_header">Water Treatment</h2>
+      <%= image_tag('water_treatment.jpg') %>
+      <%= simple_format(service.water_treatment) %>
+      <ul class="checklist">
+        <li><i class="fa fa-check"></i> Sediment Filtration</li>
+        <li><i class="fa fa-check"></i> Reverse Osmosis</li>
+        <li><i class="fa fa-check"></i> Acid Neutralizers</li>
+        <li><i class="fa fa-check"></i> Water Softeners</li>
+        <li><i class="fa fa-check"></i> Carbon Tanks</li>
+        <li><i class="fa fa-check"></i> Iron Removal</li>
+        <li><i class="fa fa-check"></i> Sulfur Removal</li>
+        <li><i class="fa fa-check"></i> Ozone Purification</li>
+        <li><i class="fa fa-check"></i> Radon Remediation</li>
+        <li><i class="fa fa-check"></i> Ultraviolet Purification</li>
+        <li><i class="fa fa-check"></i> Chlorine Removal</li>
+        <li><i class="fa fa-check"></i> Stains &amp; Smelly Water</li>
+      </ul>
+      <a href="/water_treatments">Learn More</a>
+    </div>
+    <hr>
+    <div class="service_construction">
+      <h2 class="section_header">New Construction</h2>
+      <%= image_tag('construction.jpg') %>
+      <%= simple_format(service.construction) %>
+      <br>
+      <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
+      <hr>
+    </div>
+    <div class="service_pressure">
+      <h2 class="section_header">Constant Pressure Systems</h2>
+      <%= image_tag('smartflo.jpg') %>
+      <%= simple_format(service.pressure_systems) %>
+      <br>
+      <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
+      <hr>
+    </div>
+    <div class="service_flood">
+      <h2 class="section_header">Flood Prevention Devices</h2>
+      <%= image_tag('flood.jpg') %>
+      <%= simple_format(service.flood_prevention) %><br>
+      <br>
+      <p>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email</a></p>
+      <hr>
+    </div>
+  </div>
 <% end %>
 <br>
