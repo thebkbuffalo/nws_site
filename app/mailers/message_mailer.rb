@@ -1,10 +1,12 @@
-class MessagesController < ApplicationController
+class MessageMailer < ApplicationMailer
 
-  def index
-    @message = Message.new
-  end
+  # use your own email address here
+  default :to => "evan.m.berg@gmail.com"
 
-  def new
+  def message_me(msg)
+    @msg = msg
+
+    mail from: @msg.email, subject: @msg.subject, body: @msg.content
   end
 
   def create
