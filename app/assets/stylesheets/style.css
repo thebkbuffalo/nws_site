@@ -2,10 +2,6 @@ body {
   padding-top: 5em;
 }
 
-#login_form {
-  margin: 4em 50em 0 15em;
-}
-
 hr {
   border-top: 1px solid black!important;
 }
@@ -58,7 +54,7 @@ footer hr {
 }
 
 footer a {
-  color: white;
+  color: white!important;
 }
 
 footer div {

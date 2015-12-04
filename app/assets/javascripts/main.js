@@ -14,4 +14,10 @@ $(document).ready(function(){
     console.log(urlPath)
     $('footer').hide();
   }
+
+  if(urlPath === '/signup'){
+    console.log(urlPath)
+    $('footer').hide();
+  }
+
 });
