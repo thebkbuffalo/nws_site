@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 
+
+
 #paperclip for uploading files
 gem 'paperclip'
 
