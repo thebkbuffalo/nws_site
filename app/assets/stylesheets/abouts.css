@@ -1,4 +1,13 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+.about_header {
+  text-align: center;
+}
+
+#about_content {
+  text-align: center;
+  margin: 0 15em;
+}
+
+#about_content img {
+  border-radius: 15px;
+  margin: 2em 0;
+}

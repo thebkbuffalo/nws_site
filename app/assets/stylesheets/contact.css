@@ -9,3 +9,7 @@
 #contact_content img {
   border-radius: 10px;
 }
+
+.contact_tag {
+  line-height: 1.3;
+}

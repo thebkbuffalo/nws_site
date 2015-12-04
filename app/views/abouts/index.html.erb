@@ -1,20 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-
-<h1>About</h1>
-<hr>
-<% if current_user %>
-  <%= link_to 'New About', new_about_path %>
+<div class="about_header">
+  <h1 class="page_title">About</h1><br>
+  <h3 class="tag_line">National Water Service, Water Treatment and Purification</h3>
   <hr>
-<% end %>
+</div>
 
 <% @abouts.each do |about| %>
-  <%= about.content %><br><br>
   <% if current_user %>
     <!-- <%= link_to 'Show', about %> -->
     <h3><%= link_to 'Edit', edit_about_path(about) %></h3>
     <!-- <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %> -->
   <% end %>
+  <div id="about_content">
+    <h1>National Water Service</h1>
+    <%= image_tag("about_nws.jpg") %>
+    <%= simple_format(about.content) %><br><br>
+  </div>
 <% end %>
 
 <br>
