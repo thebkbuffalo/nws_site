@@ -8,4 +8,10 @@ $(document).ready(function(){
   $('.ckeditor').ckeditor({
     // optional config
   });
+
+  var urlPath = window.location.pathname;
+  if(urlPath === '/login'){
+    console.log(urlPath)
+    $('footer').hide();
+  }
 });
