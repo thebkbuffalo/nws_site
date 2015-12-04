@@ -2,6 +2,10 @@ body {
   padding-top: 5em;
 }
 
+hr {
+  border-top: 1px solid black!important;
+}
+
 .navbar-header {
   text-align: center!important;
 }

@@ -1,3 +1,23 @@
+.contact_header {
+  text-align: center;
+}
+
+.contact_content {
+  margin: 0 15em;
+}
+
+.contact_content h4 {
+ line-height: 1.5em!important;
+}
+
 #message_form {
-  margin-top: 6em;
+  margin: 0 30em 0 15em;
+}
+
+#message_form h2 {
+  line-height: 1.3em;
+}
+
+#message_form a {
+  color: #2185D5;
 }
