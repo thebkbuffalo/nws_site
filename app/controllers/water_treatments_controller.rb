@@ -35,7 +35,7 @@ class WaterTreatmentsController < ApplicationController
 
     respond_to do |format|
       if @water_treatment.save
-        format.html { redirect_to @water_treatment, notice: 'Water treatment was successfully created.' }
+        format.html { redirect_to '/water_treatments', notice: 'Water treatment was successfully created.' }
         format.json { render :show, status: :created, location: @water_treatment }
       else
         format.html { render :new }
@@ -49,7 +49,7 @@ class WaterTreatmentsController < ApplicationController
   def update
     respond_to do |format|
       if @water_treatment.update(water_treatment_params)
-        format.html { redirect_to @water_treatment, notice: 'Water treatment was successfully updated.' }
+        format.html { redirect_to '/water_treatments', notice: 'Water treatment was successfully updated.' }
         format.json { render :show, status: :ok, location: @water_treatment }
       else
         format.html { render :edit }

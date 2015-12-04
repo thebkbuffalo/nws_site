@@ -8,8 +8,7 @@ class MessagesController < ApplicationController
 
     if @message.valid?
       MessageMailer.message_me(@message).deliver_now
-      redirect_to '/', notice: "Thank You!  We have received your message and will get back to you ASAP."
-    else
+      redirect_to '/'
       render :new
     end
   end

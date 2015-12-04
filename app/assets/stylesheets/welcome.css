@@ -1,0 +1,19 @@
+.welcome_header {
+  text-align: center;
+}
+
+.welcome_content {
+  margin: 0 15em;
+}
+
+.welcome_content a {
+  color: #2185D5;
+}
+
+.welcome_content a:hover {
+  background: none;
+}
+
+.welcome_content img {
+  border-radius: 15px;
+}

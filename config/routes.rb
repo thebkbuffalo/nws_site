@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'messages/new'
 
   resources :products
-  root 'blogs#index' # probably gonna make this blogs#index jam, should be better, but we'll see
+  root 'welcome#index' # probably gonna make this blogs#index jam, should be better, but we'll see
 
 
   resources :water_treatments

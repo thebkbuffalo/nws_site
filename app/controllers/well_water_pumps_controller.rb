@@ -35,7 +35,7 @@ class WellWaterPumpsController < ApplicationController
 
     respond_to do |format|
       if @well_water_pump.save
-        format.html { redirect_to @well_water_pump, notice: 'Well water pump was successfully created.' }
+        format.html { redirect_to '/well_water_pumps', notice: 'Well water pump was successfully created.' }
         format.json { render :show, status: :created, location: @well_water_pump }
       else
         format.html { render :new }
@@ -49,7 +49,7 @@ class WellWaterPumpsController < ApplicationController
   def update
     respond_to do |format|
       if @well_water_pump.update(well_water_pump_params)
-        format.html { redirect_to @well_water_pump, notice: 'Well water pump was successfully updated.' }
+        format.html { redirect_to '/well_water_pumps', notice: 'Well water pump was successfully updated.' }
         format.json { render :show, status: :ok, location: @well_water_pump }
       else
         format.html { render :edit }

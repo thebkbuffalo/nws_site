@@ -35,7 +35,7 @@ class ResidentialsController < ApplicationController
 
     respond_to do |format|
       if @residential.save
-        format.html { redirect_to @residential, notice: 'Residential was successfully created.' }
+        format.html { redirect_to '/residential', notice: 'Residential was successfully created.' }
         format.json { render :show, status: :created, location: @residential }
       else
         format.html { render :new }
@@ -49,7 +49,7 @@ class ResidentialsController < ApplicationController
   def update
     respond_to do |format|
       if @residential.update(residential_params)
-        format.html { redirect_to @residential, notice: 'Residential was successfully updated.' }
+        format.html { redirect_to '/residential', notice: 'Residential was successfully updated.' }
         format.json { render :show, status: :ok, location: @residential }
       else
         format.html { render :edit }

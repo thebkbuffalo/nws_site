@@ -35,7 +35,7 @@ class CommercialsController < ApplicationController
 
     respond_to do |format|
       if @commercial.save
-        format.html { redirect_to @commercial, notice: 'Commercial was successfully created.' }
+        format.html { redirect_to '/commercial', notice: 'Commercial was successfully created.' }
         format.json { render :show, status: :created, location: @commercial }
       else
         format.html { render :new }
@@ -49,7 +49,7 @@ class CommercialsController < ApplicationController
   def update
     respond_to do |format|
       if @commercial.update(commercial_params)
-        format.html { redirect_to @commercial, notice: 'Commercial was successfully updated.' }
+        format.html { redirect_to '/commercial', notice: 'Commercial was successfully updated.' }
         format.json { render :show, status: :ok, location: @commercial }
       else
         format.html { render :edit }

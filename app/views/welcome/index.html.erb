@@ -1,6 +1,23 @@
-<% @blogs.each do |blog| %>
-  <h2><%= blog.title %></h2>
-  <h3><%= blog.content %></h3>
-  <h5><%= blog.author %></h5>
+<div class="welcome_header">
+  <h2 class="page_title">An Award-Winning company Time and Time Again!</h2><br>
+  <h5 class="tag_line">Serving all of Maryland, Virginia, and Washington D.C. for superior Water Treatment and Well Pump Service</h5>
+</div>
+<div class="welcome_content">
   <hr>
-<% end %>
+  <h2 class="tag_line">Outstanding Installations &amp; Service</h2><br>
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/xXvLrXYTqbI" frameborder="0" allowfullscreen></iframe>
+  <br><br>
+  <h4>Our installers are all professionally trained in both Water Treatment, Purification, as well as all aspects of well pump service. For over 30 years we have dominated the industry in our area and we still hold an unblemished record. Our prices are competitive and yet we still find the time to continually invest our time in classrooms, on the job training, and on the proper equipment to get the job done.<br><br>In addition, every installation is followed up on by an inspection to ensure that the water quality is as promised and that the installation is plumbed to international plumbing codes as well as our strict guidelines!</h4>
+  <h5>Call Now to speak with a member of our knowledgeable staff, or <a href="mailto:david@nationalwaterservice.com">send us an email.</a></h5><br>
+  <h5><%= link_to('Learn More', '/services') %></h5>
+  <hr>
+  <h2 class="tag_line">Our Promise</h2><br>
+  <%= image_tag('green_tubes.jpg') %><br><br>
+  <h4>National Water Service is a local Howard-Montgomery County company with a large service area throughout the Mid-Atlantic region as well as Northern Va. Our clients stay loyal to us because we are simply the best in our field. <br><br>We guarantee that...</h4>
+  <ul class="checklist">
+    <li><i class="fa fa-check"></i> Your installation will be clean, <br>neat, and the <br>plumbing will be level.</li>
+    <li><i class="fa fa-check"></i> Every installation will <br>be followed up with an <br>inspection.</li>
+    <li><i class="fa fa-check"></i> Our quotes are <br>guaranteed with no <br>hidden costs.</li>
+    <li><i class="fa fa-check"></i> We will remain <br>committed to giving you fast, <br>friendly, and fair service.</li>
+  </ul>
+</div>
