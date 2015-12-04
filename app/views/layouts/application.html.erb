@@ -21,7 +21,7 @@
           <li><%= link_to "Products", '/products' %></li>
           <li><%= link_to "Discounts", '/discounts' %></li>
           <li><%= link_to "About", '/about' %></li>
-          <li><%= link_to "Contact", '/contact' %></li>
+          <li><%= link_to "Contact", '/messages' %></li>
           <% if current_user %>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "#{current_user.name}", '/', style: "color:black;font-weight:bold;" %></li>
@@ -68,7 +68,7 @@
       <p>Copyright © 2015 National Water Service. All Rights Reserved.</p>
     </div>
     <div id="footer_center">
-      <p>| <%= link_to 'Home', '/' %> | <%= link_to "Residential", '/residential' %> | <%= link_to "Commercial", '/commercial' %> | <%= link_to "Services", '/services' %> | <%= link_to "About", '/about' %> | <%= link_to "Contact", '/contact' %></p> 
+      <p>| <%= link_to 'Home', '/' %> | <%= link_to "Residential", '/residential' %> | <%= link_to "Commercial", '/commercial' %> | <%= link_to "Services", '/services' %> | <%= link_to "About", '/about' %> | <%= link_to "Contact", '/contact' %></p>
     </div>
     <div id="footer_right">
       <%= image_tag("logo.png", height: "72px", width: "150px") %>

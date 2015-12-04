@@ -1,27 +1,29 @@
-<%= form_for Message.new do |f| %>
-  
+<div id="message_form">
+  <%= form_for Message.new do |f| %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
 
-  <div class="field">
-    <%= f.label :subject %>
-    <%= f.text_field :subject %>
-  </div>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
+    <div class="field">
+      <%= f.label :subject %>
+      <%= f.text_field :subject %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit 'Send', class: 'button' %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Send', class: 'button' %>
+    </div>
+  <% end %>
+</div>
