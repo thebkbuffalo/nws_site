@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'messages/new'
+
   resources :products
   root 'blogs#index' # probably gonna make this blogs#index jam, should be better, but we'll see
 
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
   resources :commercials, path: "commercial"
   resources :residentials, path: "residential"
   resources :blogs, path: "blog"
+
+  resources :messages, only: [:new, :create, :index]
 
 
   get '/login' => 'sessions#new'
