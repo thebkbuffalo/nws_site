@@ -1,5 +1,26 @@
 body {
   padding-top: 5em;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 70px;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  /*font-size: 1.2em;*/
+  /*line-height: 1.6em;*/
+}
+
+li {
+  font-family: 'Merriweather', serif;
+}
+
+a:hover {
+  background: none;
 }
 
 hr {
@@ -13,6 +34,7 @@ hr {
 .nav li {
   font-size: 1.08em!important;
   margin: .5em .1em!important;
+  font-family: 'Merriweather', serif;
 }
 
 .page_title {
@@ -83,6 +105,10 @@ footer div {
 #footer_bottom {
   text-align: center;
   margin-top: 2.2em;
+}
+
+.footer_bottom_inner {
+  /*padding-bottom: 5em;*/
 }
 
 #footer_left {

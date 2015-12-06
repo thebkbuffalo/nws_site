@@ -4,6 +4,10 @@
   <title>National Water Service</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+  <!--<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'> -->
+  <!-- <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -61,22 +65,24 @@
   </div>
   <hr>
   <div id="footer_bottom">
-    <div id="footer_left">
-      <%= image_tag("seals.png", height: "50px", width: "103px")  %>
-      <p>Hours of Operation: Monday thru Friday 7am - 5pm</p>
-      <p>24-Hour Emergency Service</p>
-      <br>
-      <p>Copyright © 2015 National Water Service. All Rights Reserved.</p>
-    </div>
-    <div id="footer_center">
-      <p>| <%= link_to 'Home', '/' %> | <%= link_to "Residential", '/residential' %> | <%= link_to "Commercial", '/commercial' %> | <%= link_to "Services", '/services' %> | <%= link_to "About", '/about' %> | <%= link_to "Contact", '/contact' %></p>
-    </div>
-    <div id="footer_right">
-      <%= image_tag("logo.png", height: "72px", width: "150px") %>
-      <p><strong>Toll Free: </strong><a href="tel:800-232-3506">(800)-232-3506</a></p>
-      <p><strong>Washington D.C: </strong><a href="tel:301-854-1333">(301)-854-1333</a></p>
-      <p><strong>Baltimore: </strong><a href="tel:410-379-1993">(410)-379-1993</a></p>
-      <p><strong>Virginia: </strong><a href="tel:540-882-4006">(540)-882-4006</a></p>
+    <div class="footer_bottom_inner">
+      <div id="footer_left">
+        <%= image_tag("seals.png", height: "50px", width: "103px")  %>
+        <p>Hours of Operation: Monday thru Friday 7am - 5pm</p>
+        <p>24-Hour Emergency Service</p>
+        <br>
+        <p>Copyright © 2015 National Water Service. All Rights Reserved.</p>
+      </div>
+      <div id="footer_center">
+        <p>| <%= link_to 'Home', '/' %> | <%= link_to "Residential", '/residential' %> | <%= link_to "Commercial", '/commercial' %> | <%= link_to "Services", '/services' %> | <%= link_to "About", '/about' %> | <%= link_to "Contact", '/contact' %></p>
+      </div>
+      <div id="footer_right">
+        <%= image_tag("logo.png", height: "72px", width: "150px") %>
+        <p><strong>Toll Free: </strong><a href="tel:800-232-3506">(800)-232-3506</a></p>
+        <p><strong>Washington D.C: </strong><a href="tel:301-854-1333">(301)-854-1333</a></p>
+        <p><strong>Baltimore: </strong><a href="tel:410-379-1993">(410)-379-1993</a></p>
+        <p><strong>Virginia: </strong><a href="tel:540-882-4006">(540)-882-4006</a></p>
+      </div>
     </div>
   </div>
 </footer>
