@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
     if @message.valid?
       MessageMailer.message_me(@message).deliver_now
       redirect_to '/'
-      render :new
+      # render :new
     end
   end
 

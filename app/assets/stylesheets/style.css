@@ -11,8 +11,8 @@ h1 {
 
 p {
   font-family: 'Merriweather', serif;
-  /*font-size: 1.2em;*/
-  /*line-height: 1.6em;*/
+  font-size: 1em;
+  line-height: 1.6em;
 }
 
 li {
@@ -104,7 +104,7 @@ footer div {
 
 #footer_bottom {
   text-align: center;
-  margin-top: 2.2em;
+  margin-top: 1em;
 }
 
 .footer_bottom_inner {
