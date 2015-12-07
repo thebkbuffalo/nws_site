@@ -1,9 +1,10 @@
 body {
   padding-top: 5em;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  /*font-family: 'Raleway', Helvetica, Arial, sans-serif;*/
+  font-family: 'Arvo', serif;
 }
 
-h1 {
+/*h1 {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-size: 50px;
   line-height: 70px;
@@ -13,10 +14,11 @@ p {
   font-family: 'Merriweather', serif;
   font-size: 1em;
   line-height: 1.6em;
-}
+}*/
 
 li {
-  font-family: 'Merriweather', serif;
+  /*font-family: 'Merriweather', serif;*/
+  font-family: 'Arvo', serif;
 }
 
 a:hover {
