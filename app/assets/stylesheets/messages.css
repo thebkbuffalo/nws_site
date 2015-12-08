@@ -18,6 +18,16 @@
   line-height: 1.3em;
 }
 
+.contact_content a {
+  color: #2185D5;
+}
+
 #message_form a {
   color: #2185D5;
+}
+
+.contact_content a:hover {
+  background: none;
+  color: #2185D5;
+  text-decoration: underline;
 }

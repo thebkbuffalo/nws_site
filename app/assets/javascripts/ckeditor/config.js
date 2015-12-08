@@ -6,5 +6,5 @@ CKEDITOR.editorConfig = function(config) {
 
 
 $(document).ready(function() {
-  CKEDITOR.config.removePlugins = 'font,save,source,newpage,docdrops,preview,print,templates,document,find,replace,selectall,form,radio,createplaceholder,flash,table,tabletools,horizontalrule,smiley,specialchar,pagebreak,iframe,insertpre,creatediv, blockquote,numberedlist,bulletlist,form,checkbox,radio,textarea,textfield,select,anchor,link';
+  CKEDITOR.config.removePlugins = 'save,source,newpage,docdrops,preview,print,templates,document,find,replace,selectall,form,radio,createplaceholder,flash,table,tabletools,horizontalrule,smiley,specialchar,pagebreak,iframe,insertpre,creatediv, blockquote,numberedlist,bulletlist,form,checkbox,radio,textarea,textfield,select,anchor,link';
 });
